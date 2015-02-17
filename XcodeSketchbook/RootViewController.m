@@ -14,15 +14,32 @@
 
 @implementation RootViewController
 
-// Показываем алерт при выключении уведомлений
+// Показываем алерт при выключении уведомлений.
 - (IBAction)theSwitch {
     if(switchButton.on) {
     }
     else {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Вы отключили уведомления" message:@"Чтобы включить их нажмите на UISwitch Control" delegate:nil cancelButtonTitle:@"Закрыть" otherButtonTitles: nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Вы отключили уведомления"
+                                                        message:@"Чтобы включить их нажмите на UISwitch Control"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Закрыть"
+                                              otherButtonTitles: nil];
         [alert show];
     }
 }
+
+// Показываем Action Sheet при попытке перейти на сайт
+// из раздела «О приложении».
+- (IBAction)showActionSheet:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Вы уверены, что хотите перейти на сайт?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Отмена"
+                                               destructiveButtonTitle:@"Перейти на сайт"
+                                                    otherButtonTitles: nil];
+    
+    [actionSheet showInView:self.view];
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

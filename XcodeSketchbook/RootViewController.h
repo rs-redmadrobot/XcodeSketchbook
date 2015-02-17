@@ -2,7 +2,7 @@
 //  RootViewController.h
 //  XcodeSketchbook
 //
-//  Created by RS on 16.02.15.
+//  Created by Roman Shelekhov on 16.02.15.
 //  Copyright (c) 2015 RedMadRobot. All rights reserved.
 //
 
@@ -13,10 +13,20 @@
     IBOutlet UILabel *m_buttonIndexLabel;
     
     IBOutlet UISwitch *switchButton;
-    IBOutlet UILabel *label;
-
+    
+    IBOutlet UITextField *textBox;
 }
 
+// @interface RootViewController : UIViewController <UIActionSheetDelegate>
+
 - (IBAction)theSwitch;
+
+- (IBAction)showActionSheet:(id)sender;
+
+- (IBAction)openMaps:(id)sender;
+- (IBAction)openYouTube:(id)sender;
+- (IBAction)openReceiverApp:(id)sender;
+
+@property(nonatomic, retain) IBOutlet UITextField *textBox;
 
 @end
