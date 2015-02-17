@@ -19,10 +19,10 @@
  — onTintColor
  — tintColor
  
- В случае использования элеметна из Interface Builder (xib, storyboard),
- следует переопределять не подходящие кастомизированные свойства элемента
- после загрузки, а не в панели свойств IB. В противном случае изменения
- применены не будут.
+ D ckexft bcgjkmpjdfybz 'ktvtnyf bp Штеукафсу Игшдвук (чшиб ыещкнищфкв)б
+ cktletn gthtjghtltkznm yt gjl[jlzobt rfcnjvbpbhjdfyyst cdjqcndf 'ktvtynf
+ gjckt pfuheprb^ f yt d gfytkb cdjqcnd ШИЮ D ghjnbdyjv ckexft bpvtytybz
+ ghbvtytys yt ,elen&
  */
 @interface BKSwitch : UISwitch
 @end

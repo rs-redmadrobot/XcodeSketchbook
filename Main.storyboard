@@ -96,7 +96,7 @@
                 <tabBarController id="nvR-kd-hhO" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="boA-rh-JJ4">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="boA-rh-JJ4" customClass="BKTabBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -167,6 +167,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5m-HY-kjx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.66666666669999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
@@ -1351,76 +1352,57 @@
             </objects>
             <point key="canvasLocation" x="1645" y="504"/>
         </scene>
-        <!--Уведомление-->
-        <scene sceneID="yxL-Ey-bFO">
+        <!--Сегодня в 09:15-->
+        <scene sceneID="S2e-T4-L9B">
             <objects>
-                <tableViewController id="erR-be-eMw" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w00-xQ-byS">
+                <viewController id="ndn-xR-pyz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9y5-9L-Jtm"/>
+                        <viewControllerLayoutGuide type="bottom" id="HYD-3g-oW9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rE6-cB-YO5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="VcJ-IS-mRs">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ful-Tq-6Qm">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ful-Tq-6Qm" id="CYb-sa-Yxx">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oXg-Rn-Jpx">
-                                                    <rect key="frame" x="16" y="4" width="320" height="56"/>
-                                                    <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Заявка на детализацию счета 12005-0000-15009" translatesAutoresizingMaskIntoConstraints="NO" id="M6G-Aj-cOM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifMediumITC-Regular" family="OfficinaSerifMediumITC" pointSize="18"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="437" id="UJ1-9V-98u">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJ1-9V-98u" id="HuD-g3-O8U">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fo7-TN-J9G">
-                                                    <rect key="frame" x="16" y="4" width="320" height="441"/>
-                                                    <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXa-BX-Bqq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="365"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <mutableString key="text">12 июня 2013 года в Парке 300-летия Санкт-Петербурга состоится фестиваль экстремальных водных видов спорта и актуальной музыки – BeeKiteCamp.
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIW-Pp-vI0">
+                                <rect key="frame" x="12" y="64" width="296" height="56"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Заявка на детализацию счета 12005-0000-15009" translatesAutoresizingMaskIntoConstraints="NO" id="paE-ES-M2O">
+                                        <rect key="frame" x="15" y="13" width="296" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="OfficinaSerifMediumITC-Regular" family="OfficinaSerifMediumITC" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3L-yy-elq">
+                                <rect key="frame" x="12" y="116" width="296" height="403"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXa-BX-Bqq">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="365"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">12 июня 2013 года в Парке 300-летия Санкт-Петербурга состоится фестиваль экстремальных водных видов спорта и актуальной музыки – BeeKiteCamp.
  В программе фестиваля: • 	выступление известных российских и западных музыкантов Tesla Boy, Spank Rock, Amanda Blank, Mulatu Astatke, Kto DJ?;
 • 	заезд звезд кайт-серфинга;
 • 	разнообразные мастер-классы;
 • 	запуск воздушных змеев;
 • 	фуд-корт, меню которого поразит гастрономическими изысками и разнообразием даже самых требовательных гурманов.
 • 	Не пропустите!
-• 	Вход свободный.</mutableString>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="16"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="erR-be-eMw" id="OKe-JJ-d8X"/>
-                            <outlet property="delegate" destination="erR-be-eMw" id="FLL-ff-R91"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Уведомление" id="gON-g1-3C6"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hy4-0E-RpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+• 	Вход свободный.</string>
+                                        <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Сегодня в 09:15" id="kFl-vj-5Ya"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxw-ud-K2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1645" y="1190"/>
         </scene>
@@ -1438,7 +1420,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="erR-be-eMw" kind="relationship" relationship="rootViewController" id="Prw-bv-c1t"/>
+                        <segue destination="ndn-xR-pyz" kind="relationship" relationship="rootViewController" id="fRz-J7-HSi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8A-gb-93s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1748,182 +1730,8 @@
             <point key="canvasLocation" x="803" y="1190"/>
         </scene>
         <!--Настройки-->
-        <scene sceneID="aNd-is-sZU">
-            <objects>
-                <tableViewController id="yRr-VS-51G" customClass="AlertTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wau-2o-brY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <sections>
-                            <tableViewSection headerTitle="Общие" id="qw8-cr-AS9">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="pDI-rD-vqp">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pDI-rD-vqp" id="wwP-h0-SPc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p4k-Ck-WfH">
-                                                    <rect key="frame" x="12" y="12" width="200" height="30"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRc-BL-YSU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
-                                                            <state key="normal" title="Уведомления">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-r1-RIV">
-                                                    <rect key="frame" x="212" y="12" width="96" height="320"/>
-                                                    <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rut-Jc-TSG">
-                                                            <rect key="frame" x="45" y="0.0" width="51" height="31"/>
-                                                            <color key="onTintColor" red="1" green="0.66666666669999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="AQV-J9-TPZ">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQV-J9-TPZ" id="JVS-3u-3E1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-ne-DLd">
-                                                    <rect key="frame" x="12" y="12" width="200" height="30"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugc-7d-Lgy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
-                                                            <state key="normal" title="Социальные сети">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="HrI-fW-H2C">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HrI-fW-H2C" id="gcL-v2-XFK">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUW-kf-ijm">
-                                                    <rect key="frame" x="12" y="12" width="200" height="30"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MO-Yp-H1N">
-                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
-                                                            <state key="normal" title="Защита паролем">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-Ii-J4M">
-                                                    <rect key="frame" x="212" y="12" width="96" height="320"/>
-                                                    <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gue-UL-1Od">
-                                                            <rect key="frame" x="45" y="0.0" width="51" height="31"/>
-                                                            <color key="onTintColor" red="1" green="0.66666666669999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </switch>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="О приложении" id="7eb-GN-baw">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="dcJ-K6-ISP">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dcJ-K6-ISP" id="ndp-nQ-aGv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-NA-hcn">
-                                                    <rect key="frame" x="12" y="12" width="200" height="30"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eai-BA-fiT">
-                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
-                                                            <state key="normal" title="Написать нам">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="T3y-bT-Jmx">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3y-bT-Jmx" id="7wi-Oy-cnk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-yh-BT7">
-                                                    <rect key="frame" x="12" y="12" width="200" height="30"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRC-C3-Irb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="33"/>
-                                                            <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
-                                                            <state key="normal" title="О приложении">
-                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                            <connections>
-                                                                <segue destination="udA-DH-mCQ" kind="show" id="jsH-gF-uU5"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="yRr-VS-51G" id="9oF-2E-BTk"/>
-                            <outlet property="delegate" destination="yRr-VS-51G" id="rrI-qE-Mjq"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Настройки" id="AeX-s6-nBX"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="switchButton" destination="Rut-Jc-TSG" id="iyl-FY-01q"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j4J-Nr-UsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1220" y="1880"/>
-        </scene>
-        <!--Настройки-->
         <scene sceneID="oO2-7u-tyV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j4O-0S-uhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Zvy-bS-hyD" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XbA-JJ-rgd"/>
@@ -1962,9 +1770,11 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWv-Fv-3Oh">
                                         <rect key="frame" x="212" y="14" width="96" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="switch_on" offImage="switch_off" translatesAutoresizingMaskIntoConstraints="NO" id="n9b-4M-Iah">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="switch_on" offImage="switch_off" translatesAutoresizingMaskIntoConstraints="NO" id="n9b-4M-Iah" customClass="BKSwitch">
                                                 <rect key="frame" x="45" y="0.0" width="51" height="31"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="onTintColor" red="1" green="0.66666666669999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="theSwitch" destination="Zvy-bS-hyD" eventType="valueChanged" id="DNj-9F-sPJ"/>
                                                 </connections>
@@ -1979,6 +1789,131 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IlO-pQ-8wy">
+                                <rect key="frame" x="0.0" y="92" width="320" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-TO-ckA">
+                                        <rect key="frame" x="12" y="10" width="200" height="60"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Социальные сети" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-yE-ghM">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aoz-Es-yrC">
+                                        <rect key="frame" x="212" y="14" width="96" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbh-4j-ByE">
+                                        <rect key="frame" x="12" y="59" width="308" height="1"/>
+                                        <color key="backgroundColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bB-wA-s3z">
+                                <rect key="frame" x="0.0" y="152" width="320" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-oG-qba">
+                                        <rect key="frame" x="12" y="10" width="200" height="60"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Защита паролем" translatesAutoresizingMaskIntoConstraints="NO" id="6t6-xZ-ljA">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICk-Pb-Tvg">
+                                        <rect key="frame" x="212" y="14" width="96" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="switch_on" offImage="switch_off" translatesAutoresizingMaskIntoConstraints="NO" id="QFY-SD-18N" customClass="BKSwitch">
+                                                <rect key="frame" x="45" y="0.0" width="51" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="theSwitch" destination="Zvy-bS-hyD" eventType="valueChanged" id="tUA-On-Yu9"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-G7-b88">
+                                <rect key="frame" x="0.0" y="212" width="320" height="32"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Общие" translatesAutoresizingMaskIntoConstraints="NO" id="Zxm-f7-gtQ">
+                                        <rect key="frame" x="12" y="0.0" width="320" height="30"/>
+                                        <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vav-Td-U8F">
+                                <rect key="frame" x="0.0" y="244" width="320" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-J7-EeX">
+                                        <rect key="frame" x="12" y="10" width="200" height="60"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Написать нам" translatesAutoresizingMaskIntoConstraints="NO" id="BvB-ll-MaG">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9pV-8V-BKt">
+                                        <rect key="frame" x="212" y="14" width="96" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-tz-NRs">
+                                        <rect key="frame" x="12" y="59" width="308" height="1"/>
+                                        <color key="backgroundColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fc7-sd-o1o">
+                                <rect key="frame" x="0.0" y="304" width="320" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GUZ-0W-X0M">
+                                        <rect key="frame" x="12" y="10" width="200" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-dN-6eD">
+                                                <rect key="frame" x="6" y="0.0" width="200" height="40"/>
+                                                <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
+                                                <state key="normal" title="О приложении">
+                                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="udA-DH-mCQ" kind="show" id="GY6-MA-3RH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4w-t2-cTQ">
+                                        <rect key="frame" x="212" y="14" width="96" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Yd-wN-H8R">
+                                        <rect key="frame" x="12" y="59" width="308" height="1"/>
+                                        <color key="backgroundColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1987,6 +1922,7 @@
                         <outlet property="switchButton" destination="n9b-4M-Iah" id="dy0-5g-bzu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4O-0S-uhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="803" y="1880"/>
         </scene>
@@ -1995,7 +1931,7 @@
             <objects>
                 <tableViewController id="udA-DH-mCQ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iqy-mM-vR8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2136,7 +2072,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1R3-Ey-zRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="1880"/>
+            <point key="canvasLocation" x="1220" y="1880"/>
         </scene>
     </scenes>
     <resources>
