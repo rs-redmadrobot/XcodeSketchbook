@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E894EDFE-1C27-4528-B4BC-2FEC3742BBF0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XcodeSketchbook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B3FEA39164EB006680CE9D180348AA3F841CCB0D</key>
+		<string>https://github.com/rs-redmadrobot/XcodeSketchbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XcodeSketchbook.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B3FEA39164EB006680CE9D180348AA3F841CCB0D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rs-redmadrobot/XcodeSketchbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B3FEA39164EB006680CE9D180348AA3F841CCB0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B3FEA39164EB006680CE9D180348AA3F841CCB0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XcodeSketchbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -85,6 +85,7 @@
             <string>OfficinaSerifBookITC-Regular</string>
             <string>OfficinaSerifBookITC-Regular</string>
             <string>OfficinaSerifBookITC-Regular</string>
+            <string>OfficinaSerifBookITC-Regular</string>
         </mutableArray>
         <mutableArray key="OfficinaSerifMediumITC-Regular.otf">
             <string>OfficinaSerifMediumITC-Regular</string>
@@ -780,7 +781,7 @@
         <!--Избранные платежи-->
         <scene sceneID="Dlh-fC-ku6">
             <objects>
-                <tableViewController id="dWN-Fv-xcp" customClass="PaymentsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="dWN-Fv-xcp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8ck-Bk-zzk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1152,7 +1153,7 @@
                         <barButtonItem key="rightBarButtonItem" image="bk-slider-plus" id="BJk-LZ-4Tt">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="4fr-yN-JB3" kind="show" id="GvR-4e-SMH"/>
+                                <segue destination="4fr-yN-JB3" kind="presentation" id="GvR-4e-SMH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1325,7 +1326,7 @@
                                 </state>
                             </button>
                             <connections>
-                                <segue destination="THc-sr-cgl" kind="unwind" unwindAction="unwindToPayments:" id="mOh-lu-rPd"/>
+                                <segue destination="ts5-Jp-Tf4" kind="custom" customClass="DismissSegue" id="HFb-9A-WAv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="0HZ-gx-mPn">
@@ -2069,7 +2070,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1R3-Ey-zRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645" y="1880"/>
+            <point key="canvasLocation" x="1220" y="2544"/>
         </scene>
         <!--О приложении-->
         <scene sceneID="THc-lf-RIf">
@@ -2114,6 +2115,37 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1g-RO-rii">
+                                <rect key="frame" x="0.0" y="60" width="320" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-GG-mov">
+                                        <rect key="frame" x="12" y="10" width="200" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuW-c3-Obq">
+                                                <rect key="frame" x="6" y="0.0" width="200" height="40"/>
+                                                <fontDescription key="fontDescription" name="OfficinaSerifBookITC-Regular" family="OfficinaSerifBookITC" pointSize="18"/>
+                                                <state key="normal" title="Открыть карту">
+                                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Fje-eu-wcX" kind="show" id="dmC-oc-2ZH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-x4-pSg">
+                                        <rect key="frame" x="212" y="14" width="96" height="31"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zW-zB-aT3">
+                                        <rect key="frame" x="12" y="59" width="308" height="1"/>
+                                        <color key="backgroundColor" red="0.81568627449999997" green="0.7843137255" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2122,6 +2154,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV3-NC-uMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220" y="1880"/>
+        </scene>
+        <!--Карта-->
+        <scene sceneID="vct-PL-iYN">
+            <objects>
+                <viewController id="Fje-eu-wcX" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyt-w2-KHf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hbV-HW-4fp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f81-7D-cQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BZG-Et-Y9o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Fje-eu-wcX" id="09l-cN-0fP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Карта" id="ahe-MM-O0I"/>
+                    <connections>
+                        <outlet property="myMapView" destination="BZG-Et-Y9o" id="p6H-lX-ked"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bj-iG-TXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1645" y="1880"/>
         </scene>
     </scenes>
     <resources>
@@ -2132,6 +2194,7 @@
         <image name="yellow_button-press" width="288" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="jCO-Dc-rim"/>
         <segue reference="KTn-bX-LrD"/>
         <segue reference="5cE-6K-Y0e"/>
     </inferredMetricsTieBreakers>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2411C8FF1A93993500F9B3FF /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2411C8FE1A93993500F9B3FF /* DismissSegue.m */; };
 		24830FC91A9225DB0034C57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24830FC81A9225DB0034C57C /* Main.storyboard */; };
 		24830FCB1A922C340034C57C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24830FCA1A922C340034C57C /* Images.xcassets */; };
 		24FFC7DB1A90D0CD00DFC7EC /* AddToDoItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FFC7DA1A90D0CD00DFC7EC /* AddToDoItemTableViewController.m */; };
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2411C8FD1A93993500F9B3FF /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		2411C8FE1A93993500F9B3FF /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		24830FC81A9225DB0034C57C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		24830FCA1A922C340034C57C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24C381741A90AD8B0077D1CC /* XcodeSketchbook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeSketchbook-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				8347794F1A8910F9002813BF /* AppDelegate.m */,
 				834779591A8910F9002813BF /* LaunchScreen.xib */,
 				24830FC81A9225DB0034C57C /* Main.storyboard */,
+				2411C8FD1A93993500F9B3FF /* DismissSegue.h */,
+				2411C8FE1A93993500F9B3FF /* DismissSegue.m */,
 				24FFC7DC1A90D19B00DFC7EC /* PaymentsTableViewController.h */,
 				24FFC7DD1A90D19B00DFC7EC /* PaymentsTableViewController.m */,
 				8347794A1A8910F9002813BF /* Supporting Files */,
@@ -423,6 +428,7 @@
 				834779931A89121B002813BF /* BKYellowNavigationBar.m in Sources */,
 				834779AA1A89138B002813BF /* NSLayoutConstraint+BKConstraints.m in Sources */,
 				8347798E1A89121B002813BF /* BKNavigationController.m in Sources */,
+				2411C8FF1A93993500F9B3FF /* DismissSegue.m in Sources */,
 				834779961A89121B002813BF /* UINavigationBar+BKNavigationBar.m in Sources */,
 				834779B01A8913A2002813BF /* BKLabelA3.m in Sources */,
 				834779A61A89136A002813BF /* NSBundle+BKHelper.m in Sources */,

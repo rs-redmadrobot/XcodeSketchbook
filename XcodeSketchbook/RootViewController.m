@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 RedMadRobot. All rights reserved.
 //
 
+
 #import "RootViewController.h"
 
 @interface RootViewController ()
@@ -30,16 +31,25 @@
 
 // Показываем Action Sheet при попытке перейти на сайт
 // из раздела «О приложении».
+#pragma mark - Actions
 - (IBAction)showActionSheet:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Вы уверены, что хотите перейти на сайт?"
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Открыть redmadrobot.ru в Safari?"
                                                              delegate:self
                                                     cancelButtonTitle:@"Отмена"
-                                               destructiveButtonTitle:@"Перейти на сайт"
-                                                    otherButtonTitles: nil];
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Перейти на сайт", nil];
     
     [actionSheet showInView:self.view];
 }
 
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) return;
+    NSURL *link = [NSURL URLWithString:@"http://redmadrobot.ru"];
+    if ([[UIApplication sharedApplication] canOpenURL:link]) {
+        [[UIApplication sharedApplication] openURL:link];
+    }
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

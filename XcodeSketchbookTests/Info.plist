@@ -18,6 +18,10 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Чтобы мы могли определить ваше местоположение.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Чтобы мы могли определить ваше местоположение.</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

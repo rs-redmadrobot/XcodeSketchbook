@@ -13,8 +13,6 @@
     IBOutlet UILabel *m_buttonIndexLabel;
     
     IBOutlet UISwitch *switchButton;
-    
-    IBOutlet UITextField *textBox;
 }
 
 // @interface RootViewController : UIViewController <UIActionSheetDelegate>
@@ -22,11 +20,5 @@
 - (IBAction)theSwitch;
 
 - (IBAction)showActionSheet:(id)sender;
-
-- (IBAction)openMaps:(id)sender;
-- (IBAction)openYouTube:(id)sender;
-- (IBAction)openReceiverApp:(id)sender;
-
-@property(nonatomic, retain) IBOutlet UITextField *textBox;
 
 @end
