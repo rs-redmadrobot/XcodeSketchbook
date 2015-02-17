@@ -1,0 +1,23 @@
+//
+//  BKLabelA3.m
+//  BeelineUIKit
+//
+//  Created by Roman Churkin on 25.08.14.
+//  Copyright (c) 2014 RedMadRobot. All rights reserved.
+//
+
+#import "BKLabelA3.h"
+
+// Helper
+#import "BKFontConstructor.h"
+
+
+@implementation BKLabelA3
+
+- (void)configureAppearence
+{
+    [super configureAppearence];
+    self.font = [BKFontConstructor A3font];
+}
+
+@end
