@@ -42,6 +42,18 @@
     [actionSheet showInView:self.view];
 }
 
+
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) return;
+    NSURL *link = [NSURL URLWithString:@"youtube://www.youtube.com/user/rtrussian"];
+    if ([[UIApplication sharedApplication] canOpenURL:link]) {
+        [[UIApplication sharedApplication] openURL:link];
+    }
+}
+
+
+/*
 #pragma mark - UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == actionSheet.cancelButtonIndex) return;
@@ -50,7 +62,7 @@
         [[UIApplication sharedApplication] openURL:link];
     }
 }
-
+*/
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
